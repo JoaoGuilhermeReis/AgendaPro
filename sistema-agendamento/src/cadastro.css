@@ -1,0 +1,174 @@
+/* Importação de fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fundo com leve degradê moderno */
+.cadastro-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: linear-gradient(135deg, #f9fafb, #eef2f7);
+}
+
+/* Card principal */
+.formulario-box {
+  background: #ffffff;
+  padding: 56px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+
+  /* Sombra moderna mais suave */
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Título */
+.formulario-box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+/* Subtítulo */
+.formulario-box p {
+  color: #6b7280;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+
+/* Label */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  background-color: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+/* Foco elegante */
+input:focus,
+select:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Botão principal moderno */
+.btn-cadastrar {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  margin-top: 8px;
+
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  transition: all 0.3s ease;
+}
+
+/* Hover com elevação */
+.btn-cadastrar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+}
+
+/* Divisor */
+.divisor {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.divisor::before,
+.divisor::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divisor::before { margin-right: 16px; }
+.divisor::after { margin-left: 16px; }
+
+/* Botão Google */
+.btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-google:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* Texto login */
+.texto-login {
+  margin-top: 36px;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.link-login {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}

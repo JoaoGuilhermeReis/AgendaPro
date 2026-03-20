@@ -1,0 +1,77 @@
+/* Reutiliza o grid do clientes */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Estilo específico para os cards de agendamento na lista */
+.lista-agendamentos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.card-agendamento {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-agendamento:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.agendamento-data-hora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  min-width: 80px;
+  margin-right: 16px;
+}
+
+.ag-data {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ag-hora {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.agendamento-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agendamento-info strong {
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.agendamento-info span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.agendamento-acoes {
+  margin-left: auto;
+}

@@ -1,0 +1,132 @@
+/* Layout dividindo a tela em duas colunas */
+.mensagens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Cartões base sem borda (Padrão do sistema) */
+.card-template, .card-lista-pendentes {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}
+
+.texto-explicativo {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Área de texto onde o profissional digita o modelo */
+.caixa-texto-mensagem {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #9ca3af;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #111827;
+  background-color: #ffffff;
+  resize: vertical; /* Permite esticar a caixa para baixo */
+  transition: all 0.2s ease;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.caixa-texto-mensagem:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Nova dica abaixo da caixa de texto */
+.dica-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  color: #4b5563;
+}
+
+/* Estilos da Coluna Direita (Lista de Clientes) */
+.cabecalho-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.badge-contagem {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lista-clientes-zap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-cliente-zap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+.info-cliente-zap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-cliente-zap strong {
+  font-size: 16px;
+  color: #111827;
+}
+
+.servico-realizado {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Botão de Enviar (Verde WhatsApp) para disparo manual, se o usuário quiser */
+.btn-enviar-zap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366; 
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-enviar-zap:hover {
+  background-color: #128C7E;
+}
+
+/* Responsividade para telas de celular e tablets */
+@media (max-width: 900px) {
+  .mensagens-grid {
+    grid-template-columns: 1fr;
+  }
+}

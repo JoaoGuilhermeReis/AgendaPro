@@ -1,0 +1,101 @@
+.tela-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 20px;
+}
+
+.login-card {
+  background-color: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.btn-google {
+  width: 100%; /* Mantém a largura alinhada com os outros campos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 10px; /* Reduzimos de 14px para 10px para diminuir a altura drasticamente */
+  border-radius: 8px; /* Cantos um pouco mais retos para ficar com cara de sistema corporativo */
+  font-size: 14px; /* Letra um pouco menor */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-google:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.icone-google {
+  width: 18px; /* Ícone levemente menor para acompanhar a nova altura */
+  height: 18px;
+}
+
+.divisor {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.divisor::before,
+.divisor::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.divisor span {
+  padding: 0 12px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alternar-modo {
+  text-align: center;
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}

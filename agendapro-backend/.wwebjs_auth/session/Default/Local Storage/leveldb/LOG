@@ -1,0 +1,6 @@
+2026/03/16-15:08:12.666 e18 Reusing MANIFEST C:\projetos\sistema-agendamento\agendapro-backend\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/16-15:08:12.679 e18 Recovering log #23
+2026/03/16-15:08:12.685 e18 Reusing old log C:\projetos\sistema-agendamento\agendapro-backend\.wwebjs_auth\session\Default\Local Storage\leveldb/000023.log 
+2026/03/16-16:06:50.209 ca8 Level-0 table #27: started
+2026/03/16-16:06:50.232 ca8 Level-0 table #27: 14287 bytes OK
+2026/03/16-16:06:50.233 ca8 Delete type=0 #23

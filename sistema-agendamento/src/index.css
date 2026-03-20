@@ -1,0 +1,379 @@
+/* =========================================================
+   VARIÁVEIS DE CORES (Inspirado na sua imagem)
+========================================================= */
+:root {
+  --cor-nav: #2d4a3e; /* Verde escuro do Menu Superior */
+  --cor-fundo: #f4f6f5; /* Cinza bem claro do fundo da página */
+  --cor-primaria: #429b76; /* Verde do botão Adicionar e do Menu Ativo */
+  --cor-texto-titulo: #1e293b; /* Quase preto para os títulos */
+  --cor-texto-label: #64748b; /* Cinza médio para os subtítulos e labels */
+  --cor-borda: #e2e8f0; /* Cinza claro para a borda dos inputs */
+}
+
+body, html, #root {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-titulo);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* =========================================================
+   1. MENU SUPERIOR (Idêntico à foto)
+========================================================= */
+.sidebar {
+  background-color: var(--cor-nav);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.sidebar .logo-animada {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-navegacao {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-item {
+  background: transparent !important;
+  border: none !important;
+  color: #94a3b8 !important; /* Texto cinza claro quando inativo */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  height: 100%; /* Pega a altura toda da barra */
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.menu-item:hover {
+  color: white !important;
+}
+
+/* O Menu que está ativo no momento (Meus Clientes) */
+.menu-item.ativo {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* A linha verde grudada no fundo da barra */
+.menu-item.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cor-primaria);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* =========================================================
+   2. O LAYOUT DA PÁGINA E TEXTOS DE FORA
+========================================================= */
+.conteudo-principal {
+  max-width: 800px; /* Largura perfeita do cartão */
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.header-pagina {
+  margin-bottom: 24px;
+}
+
+.header-pagina h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header-pagina p {
+  color: var(--cor-texto-label);
+  font-size: 15px;
+}
+
+/* =========================================================
+   3. O CARTÃO BRANCO (Onde fica o formulário)
+========================================================= */
+.form-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+}
+
+.form-card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   4. INPUTS E BOTÃO (Idênticos)
+========================================================= */
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  font-size: 13px;
+  color: var(--cor-texto-label);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 16px !important;
+  border: 1px solid var(--cor-borda) !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  color: var(--cor-texto-titulo);
+  background-color: white !important;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: var(--cor-primaria) !important;
+  box-shadow: 0 0 0 3px rgba(66, 155, 118, 0.1) !important;
+}
+
+/* O Dropdown Especial Verde (Como na foto) */
+.select-destaque {
+  background-color: var(--cor-primaria) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 500;
+}
+.select-destaque option {
+  background-color: white;
+  color: var(--cor-texto-titulo);
+}
+
+/* O Botão Gigante do Fundo */
+.btn-adicionar-full {
+  width: 100%;
+  background-color: var(--cor-primaria) !important;
+  color: white !important;
+  border: none !important;
+  padding: 16px !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-adicionar-full:hover {
+  opacity: 0.9;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Botões de Ícone (Substituindo os Emojis) */
+.btn-icone {
+  background: transparent !important;
+  border: none !important;
+  padding: 8px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: none !important;
+  color: #64748b; /* Cinza elegante por padrão */
+}
+
+/* Efeito de brilho Azul ao passar o mouse no Lápis */
+.btn-icone.editar:hover {
+  background-color: #e0e7ff !important;
+  color: #4f46e5 !important;
+  
+}
+
+/* Efeito de brilho Vermelho ao passar o mouse na Lixeira */
+.btn-icone.excluir:hover {
+  background-color: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+.btn-icone svg {
+  pointer-events: none;
+}
+
+.abas-container {
+  display: flex;
+  background-color: #e2e8f0; /* A pista cinza clara no fundo */
+  padding: 6px; /* O espaço entre a pista e os botões */
+  border-radius: 12px;
+  margin-bottom: 24px;
+  gap: 8px; /* Espaço entre um botão e outro */
+}
+
+.btn-aba {
+  flex: 1; /* Faz as duas abas terem exatamente a mesma largura */
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b; /* Texto cinza quando inativo */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição super suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espaço entre o ícone SVG e a palavra */
+}
+
+/* Efeito ao passar o mouse numa aba inativa */
+.btn-aba:hover:not(.ativo) {
+  color: #1e293b; 
+}
+
+/* A MÁGICA: A Aba Selecionada (Fica branca, com sombra e texto Verde) */
+.btn-aba.ativo {
+  background-color: #ffffff;
+  color: var(--cor-primaria); /* Puxa aquele verde lindo que criamos antes */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05); /* A sombrinha de elevação */
+}
+
+.mensagens-prontas {
+  background-color: #f8fafc; /* Um fundo cinza ultra-claro para destacar a área */
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1; /* Borda tracejada para dar ideia de "ferramenta" */
+  margin-bottom: 24px;
+}
+
+.btn-sugestao {
+  background-color: #ffffff !important;
+  color: #64748b !important; 
+  border: 1px solid #cbd5e1 !important; 
+  padding: 8px 16px !important;
+  border-radius: 100px !important; /* O segredo do formato de pílula arredondada */
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02) !important;
+}
+
+/* O Efeito Premium ao passar o mouse */
+.btn-sugestao:hover {
+  background-color: #ecfdf5 !important; /* Fundo do chip fica verde clarinho */
+  color: var(--cor-primaria) !important; /* Texto fica verde escuro */
+  border-color: var(--cor-primaria) !important; /* A borda acende em verde */
+  transform: translateY(-1px);
+}
+
+.card-agendamento {
+  background-color: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px; /* Espaço entre um cartão e o de baixo */
+  display: flex;
+  align-items: center;
+  gap: 24px; /* O SEGREDO: Separa o bloco de hora do bloco de nome */
+  box-shadow: 0 4px 6px -4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Um efeitinho premium ao passar o mouse no cartão inteiro */
+.card-agendamento:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -8px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+
+/* O Bloquinho de Data e Hora (Como se fosse uma folha de calendário) */
+.agendamento-data-hora {
+  background-color: #ecfdf5; /* Fundo verdinho bem claro */
+  border: 1px solid #d1fae5;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px; /* Garante que as caixinhas tenham o mesmo tamanho */
+}
+
+.ag-data {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cor-primaria); /* Puxa o verde do sistema */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.ag-hora {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cor-texto-titulo);
+}
+
+/* As Informações do Cliente (Ficam no meio, bem alinhadas) */
+.agendamento-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Isto faz a info do cliente ocupar todo o espaço do meio e empurrar os botões de ação para a direita */
+  gap: 6px;
+}
+
+.agendamento-info strong {
+  font-size: 17px;
+  color: var(--cor-texto-titulo);
+  letter-spacing: -0.3px;
+}
+
+.agendamento-info span {
+  font-size: 14px;
+  color: var(--cor-texto-label);
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Se você quiser colocar aquele ícone de tesoura ou ferramenta antes do serviço */
+.agendamento-info span::before {
+  content: '•'; /* Uma bolinha sutil para dar acabamento */
+  margin-right: 6px;
+  color: #cbd5e1;
+}
+
+.logo-container:hover .icone-relogio {
+  /* Giramos o SVG inteiro em vez de apenas a linha */
+  animation: girarRelogio 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes girarRelogio {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

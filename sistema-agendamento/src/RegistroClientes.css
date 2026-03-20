@@ -1,0 +1,104 @@
+.registo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formulario-seccao, .lista-seccao {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.input-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-grupo label {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.input-grupo input, .input-grupo select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.btn-guardar {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 42px;
+}
+
+.tabela-responsiva {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #475569;
+}
+
+.destaque-retorno {
+  color: #059669;
+  font-weight: bold;
+}
+
+.acoes-botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-editar {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-apagar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sem-permissao {
+  font-size: 12px;
+  color: #94a3b8;
+  font-style: italic;
+}
